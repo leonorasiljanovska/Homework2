@@ -1,0 +1,95 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header styling */
+h1 {
+    text-align: center;
+    color: lightcoral;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Table styling */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table border and cell padding */
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+
+/* Table header */
+th {
+    background-color: lightcoral;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/* Table cells */
+td {
+    text-align: center;
+    background-color: #f9f9f9;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+/* Zebra striping for table rows */
+tr:nth-child(even) td {
+    background-color: #f2f2f2;
+}
+
+/* Hover effect for rows */
+table tr:hover td {
+    background-color: #f1f1f1;
+}
+
+/* Responsive styling for small screens */
+@media (max-width: 768px) {
+    table {
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    td {
+        font-size: 0.85rem;
+    }
+}
+
+/* Links styling */
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: lightcoral;
+    transition: color 0.3s ease;
+}
+#option:hover{
+    background-color: lightcoral;
+    color:white;
+}
+a:hover {
+    color: lightcoral;
+}

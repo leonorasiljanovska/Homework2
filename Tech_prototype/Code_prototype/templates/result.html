@@ -1,0 +1,62 @@
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <link rel="stylesheet" href="/static/style.css">#}
+{#    <title>Резултати</title>#}
+{#</head>#}
+{#<body>#}
+{#    <h1>Резултати за {{ company_code }}</h1>#}
+{##}
+{#    {% if error %}#}
+{#        <p>{{ error }}</p>#}
+{#    {% else %}#}
+{#        <table>#}
+{#            <thead>#}
+{#                <tr>#}
+{#                    <th>Датум</th>#}
+{#                    <th>Цена</th>#}
+{#                    <th>Макс.</th>#}
+{#                    <th>Мин.</th>#}
+{#                    <th>Просек</th>#}
+{#                    <th>Количина</th>#}
+{#                    <th>Промет</th>#}
+{#                </tr>#}
+{#            </thead>#}
+{#            <tbody>#}
+{#                {% for row in data %}#}
+{#                <tr>#}
+{#                    <td>{{ row['Датум'] }}</td>#}
+{#                    <td>{{ row['Цена на последна трансакција'] }}</td>#}
+{#                    <td>{{ row['Макс.'] }}</td>#}
+{#                    <td>{{ row['Мин.'] }}</td>#}
+{#                    <td>{{ row['Просечна цена'] }}</td>#}
+{#                    <td>{{ row['Количина'] }}</td>#}
+{#                    <td>{{ row['Промет во денари'] }}</td>#}
+{#                </tr>#}
+{#                {% endfor %}#}
+{#            </tbody>#}
+{#        </table>#}
+{#    {% endif %}#}
+{##}
+{#    <a href="/">Пребарај повторно</a>#}
+{#</body>#}
+{#</html>#}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Company Data </title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <h1>Data For {{ company_code }}</h1>
+    <div>
+        {{ data|safe }} <!-- This will render the data as an HTML table -->
+    </div>
+    <br>
+    <a href="/">Back to search</a>
+</body>
+</html>

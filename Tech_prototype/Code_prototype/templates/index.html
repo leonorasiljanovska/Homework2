@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Search</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Пребарување на акции</h1>
+    <form action="/search" method="POST">
+        <label for="company_code">Избери код на компанија:</label>
+        <select id="company_code" name="company_code" required>
+            <option id="option" value="" disabled selected>-- Изберете компанија --</option>
+            {% for code in companies %}
+                <option value="{{ code }}">{{ code }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Пребарај</button>
+    </form>
+</body>
+</html>
